@@ -62,3 +62,52 @@ export function PHOTO_POST(formData, token) {
     },
   };
 }
+
+export function PHOTOS_GET(page, total, user) {
+  return {
+    url: `${baseUrl}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+}
+
+export function PHOTO_GET(id) {
+  return {
+    url: `${baseUrl}/api/photo/${id}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+}
+
+export function COMMENT_POST(id, body) {
+  const token = window.localStorage.getItem('@Dogs:token');
+  return {
+    url: `${baseUrl}/api/comment/${id}`,
+    options: {
+      method: 'POST',
+      cache: 'no-store',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function PHOTO_DELETE(id) {
+  const token = window.localStorage.getItem('@Dogs:token');
+  return {
+    url: `${baseUrl}/api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
+    },
+  };
+}
