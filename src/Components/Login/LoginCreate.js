@@ -13,7 +13,7 @@ const LoginCreate = () => {
   const password = useForm();
   const { userLogin } = React.useContext(userContext);
   const { loading, error, request } = useFetch();
-  // console.log(error);
+
   async function handleSubmit(event) {
     event.preventDefault();
     const { url, options } = USER_POST({
