@@ -111,3 +111,29 @@ export function PHOTO_DELETE(id) {
     },
   };
 }
+
+export function PASSWORD_LOST(body) {
+  return {
+    url: `${baseUrl}/api/password/lost`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function STATS_GET() {
+  const token = window.localStorage.getItem('@Dogs:token');
+  return {
+    url: `${baseUrl}/api/stats`,
+    options: {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
+    },
+  };
+}

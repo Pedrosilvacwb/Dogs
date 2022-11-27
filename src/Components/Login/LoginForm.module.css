@@ -1,15 +1,15 @@
-.form{
+.form {
   margin-bottom: 2rem;
 }
 
-.perdeu{
+.perdeu {
   display: inline-block;
   color: #666;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   line-height: 1;
 }
 
-.perdeu::after{
+.perdeu::after {
   content: '';
   height: 2px;
   width: 100%;
@@ -17,26 +17,27 @@
   display: block;
 }
 
-.cadastro{
+.cadastro {
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-.cadastro p{
+.cadastro p {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.subtitle{
+.subtitle {
   font-family: var(--type-second);
   line-height: 1;
   font-size: 2rem;
 }
 
-.subtitle::after{
+.subtitle::after {
   content: '';
   display: block;
   background: #ddd;
-  height: .5rem;
+  height: 0.5rem;
   width: 3rem;
-  border-radius:.2rem ;
+  border-radius: 0.2rem;
 }
